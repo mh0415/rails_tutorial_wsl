@@ -83,7 +83,11 @@ class UserTest < ActiveSupport::TestCase
     assert_not michael.following?(archer)
     michael.follow(archer)
     assert michael.following?(archer)
+    assert archer.followers.include?(michael)
     michael.unfollow(archer)
+    assert_not michael.following?(michael)
+    #ユーザーは自分自身をフォローできない
+    michael.follow(michael)
     assert_not michael.following?(michael)
   end
 
