@@ -1,2 +1,3 @@
 # rails_tutorial_wsl
 WindowsでWSL2を用いてUbuntu仮想環境で環境構築
+Docker未使用
